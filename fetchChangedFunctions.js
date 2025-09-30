@@ -33,12 +33,7 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
   console.log(`🔄 Fetching PR #${pull_number} for ${owner}/${repo}...`);
 
   // 1️⃣ Get PR file diffs
-  const filesRes = await axios.get(
-    `https://api.github.com/repos/${owner}/${repo}/pulls/${pull_number}/files`,
-    {
-      headers: { Authorization: `token ${token}` },
-    }
-  );
+  
 
   const files = filesRes.data;
 
@@ -102,3 +97,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
