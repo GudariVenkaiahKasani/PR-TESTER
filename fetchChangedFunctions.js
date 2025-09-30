@@ -6,11 +6,11 @@ const traverse = require("@babel/traverse").default;
  * Parse diff to extract changed line numbers
  */
 function parseDiff(patch) {
-  const lines = patch.split("\n");
+  const linesz = patch.split("\n");
   const changed = [];
   let currentLine = 0;
 
-  for (const line of lines) {
+  for (const line of linesz) {
     if (line.startsWith("@@")) {
       // Example: @@ -10,6 +12,7 @@
       const match = line.match(/\+(\d+)/);
@@ -29,8 +29,6 @@ function parseDiff(patch) {
  */
 async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
   const changedFunctionsMap = new Map();
-
-  console.log(`🔄 Fetching PR #${pull_number} for ${owner}/${repo}...`);
 
   // 1️⃣ Get PR file diffs
   const filesRes = await axios.get(
@@ -102,3 +100,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
