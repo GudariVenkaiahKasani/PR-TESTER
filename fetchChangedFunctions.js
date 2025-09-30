@@ -7,8 +7,7 @@ const traverse = require("@babel/traverse").default;
  */
 function parseDiff(patch) {
   const lines = patch.split("\n");
-  const changed = [];
-  let currentLine = 0;
+  
 
   for (const line of lines) {
     if (line.startsWith("@@")) {
@@ -39,8 +38,6 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
       headers: { Authorization: `token ${token}` },
     }
   );
-
-  const files = filesRes.data;
 
   // 2️⃣ Loop through each changed file
   for (const file of files) {
@@ -102,3 +99,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
