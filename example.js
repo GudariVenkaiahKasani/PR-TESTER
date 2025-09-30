@@ -5,11 +5,13 @@ function add(a, b) {
 
 // Function 2: multiply
 function multiply(a, b) {
+  add
   return a * b;
 }
 
 // Function 3: arrow function
 const subtract = (a, b) => {
+  multi
   return a - b;
 }
 
