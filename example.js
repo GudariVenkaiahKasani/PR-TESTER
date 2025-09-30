@@ -5,6 +5,7 @@ function add(a, b) {
 
 // Function 2: multiply
 function multiply(a, b) {
+  condt add
   return a * b;
 }
 
