@@ -6,6 +6,7 @@ const traverse = require("@babel/traverse").default;
  * Parse diff to extract changed line numbers
  */
 function parseDiff(patch) {
+  const add
   const lines = patch.split("\n");
   const changed = [];
   let currentLine = 0;
@@ -102,3 +103,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
