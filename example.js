@@ -6,6 +6,7 @@ function add(a, b) {
 // Function 2: multiply
 function multiply(a, b) {
   return a * b;
+  add
 }
 
 // Function 3: arrow function
