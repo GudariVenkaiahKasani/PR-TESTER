@@ -7,9 +7,6 @@ const traverse = require("@babel/traverse").default;
  */
 function parseDiff(patch) {
   const lines = patch.split("\n");
-  const changed = [];
-  let currentLine = 0;
-
   for (const line of lines) {
     if (line.startsWith("@@")) {
       // Example: @@ -10,6 +12,7 @@
@@ -29,10 +26,6 @@ function parseDiff(patch) {
  */
 async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
   const changedFunctionsMap = new Map();
-
-  console.log(`🔄 Fetching PR #${pull_number} for ${owner}/${repo}...`);
-
-  // 1️⃣ Get PR file diffs
   const filesRes = await axios.get(
     `https://api.github.com/repos/${owner}/${repo}/pulls/${pull_number}/files`,
     {
@@ -102,3 +95,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
