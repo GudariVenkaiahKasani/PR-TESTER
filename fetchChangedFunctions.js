@@ -29,10 +29,8 @@ function parseDiff(patch) {
  */
 async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
   const changedFunctionsMap = new Map();
-
-  console.log(`🔄 Fetching PR #${pull_number} for ${owner}/${repo}...`);
-
-  // 1️⃣ Get PR file diffs
+ // 1️⃣ Get PR file diffs
+  const data=2;
   const filesRes = await axios.get(
     `https://api.github.com/repos/${owner}/${repo}/pulls/${pull_number}/files`,
     {
@@ -102,3 +100,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
