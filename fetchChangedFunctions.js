@@ -29,7 +29,8 @@ function parseDiff(patch) {
  */
 async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
   const changedFunctionsMap = new Map();
-
+  const newVariable=123
+  const secondnewvariable=145;
   console.log(`🔄 Fetching PR #${pull_number} for ${owner}/${repo}...`);
 
   // 1️⃣ Get PR file diffs
@@ -102,3 +103,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
