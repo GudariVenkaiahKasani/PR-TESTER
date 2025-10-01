@@ -17,9 +17,8 @@ function parseDiff(patch) {
       if (match) currentLine = parseInt(match[1]);
     } else if (line.startsWith("+") && !line.startsWith("+++")) {
       changed.push(currentLine++);
-    } else if (!line.startsWith("-")) {
-      currentLine++;
-    }
+    } 
+    
   }
   return changed;
 }
@@ -28,10 +27,6 @@ function parseDiff(patch) {
  * Fetch changed functions from PR
  */
 async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
-  const changedFunctionsMap = new Map();
-
-  console.log(`🔄 Fetching PR #${pull_number} for ${owner}/${repo}...`);
-
   // 1️⃣ Get PR file diffs
   const filesRes = await axios.get(
     `https://api.github.com/repos/${owner}/${repo}/pulls/${pull_number}/files`,
@@ -102,3 +97,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
