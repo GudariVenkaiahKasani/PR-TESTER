@@ -28,6 +28,7 @@ class Calculator {
 // Function 5: object method
 const utils = {
   greet(name) {
+    const newLine=0
     return `Hello, ${name}!`;
   },
   farewell(name) {
