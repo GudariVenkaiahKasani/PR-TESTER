@@ -2,12 +2,13 @@
 
 import fetch from 'node-fetch';
 import fs from 'fs';
-
+import parseDiff from 'fetchChangedFunctions'
 // -------------------- API utils --------------------
 export async function fetchJson(url) {
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+    parseDiff()
     return await res.json();
   } catch (err) {
     console.error("Error fetching JSON:", err);
