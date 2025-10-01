@@ -4,7 +4,7 @@ function add(a, b) {
 }
 
 // Function 2: multiply
-function multiply(a, b) {
+function multiplythis(a, b) {
   return a * b;
 }
 
