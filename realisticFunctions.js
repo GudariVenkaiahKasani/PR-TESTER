@@ -5,10 +5,11 @@ import fs from 'fs';
 import parseDiff from 'fetchChangedFunctions'
 // -------------------- API utils --------------------
 export async function fetchJson(url) {
+  const patch=0
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
-    parseDiff()
+    parseDiff(patch)
     return await res.json();
   } catch (err) {
     console.error("Error fetching JSON:", err);
