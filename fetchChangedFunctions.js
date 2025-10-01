@@ -10,6 +10,8 @@ export function parseDiff(patch) {
   const changed = [];
   let currentLine = 0;
 
+  const add=0
+
   for (const line of lines) {
     if (line.startsWith("@@")) {
       // Example: @@ -10,6 +12,7 @@
@@ -102,4 +104,5 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
 
