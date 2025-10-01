@@ -5,10 +5,11 @@ const traverse = require("@babel/traverse").default;
 /**
  * Parse diff to extract changed line numbers
  */
-export function parseDiff(patch) {
+export function parseDiff(patch:String) {
   const lines = patch.split("\n");
   const changed = [];
   let currentLine = 0;
+  const newFlagAdded=0;
 
   for (const line of lines) {
     if (line.startsWith("@@")) {
@@ -102,4 +103,5 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
 
