@@ -1,6 +1,6 @@
 // realisticFunctions.js
 
-import fetch from 'node-fetch';
+
 import fs from 'fs';
 import parseDiff from 'fetchChangedFunctions'
 // -------------------- API utils --------------------
