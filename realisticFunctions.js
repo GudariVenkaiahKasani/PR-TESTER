@@ -2,7 +2,7 @@
 
 
 import fs from 'fs';
-import parseDiff from 'fetchChangedFunctions'
+import parseDiff from './fetchChangedFunctions'
 // -------------------- API utils --------------------
 export async function fetchJson(url) {
   const patch=0
