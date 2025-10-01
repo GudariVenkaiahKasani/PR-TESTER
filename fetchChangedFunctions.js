@@ -9,6 +9,7 @@ function parseDiff(patch) {
   const lines = patch.split("\n");
   const changed = [];
   let currentLine = 0;
+  const dobleMM=0
 
   for (const line of lines) {
     if (line.startsWith("@@")) {
@@ -102,3 +103,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
