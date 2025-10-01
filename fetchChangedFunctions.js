@@ -9,18 +9,6 @@ function parseDiff(patch) {
   const lines = patch.split("\n");
   const changed = [];
   let currentLine = 0;
-
-  for (const line of lines) {
-    if (line.startsWith("@@")) {
-      // Example: @@ -10,6 +12,7 @@
-      const match = line.match(/\+(\d+)/);
-      if (match) currentLine = parseInt(match[1]);
-    } else if (line.startsWith("+") && !line.startsWith("+++")) {
-      changed.push(currentLine++);
-    } else if (!line.startsWith("-")) {
-      currentLine++;
-    }
-  }
   return changed;
 }
 
@@ -102,3 +90,4 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
