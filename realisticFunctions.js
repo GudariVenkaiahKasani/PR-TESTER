@@ -9,6 +9,7 @@ export async function fetchJson(url) {
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     return await res.json();
+    const addedToFetchJson=0
   } catch (err) {
     console.error("Error fetching JSON:", err);
     throw err;
