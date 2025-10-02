@@ -8,6 +8,7 @@ import {add} from './example'
 export function parseDiff(patch) {
   const lines = patch.split("\n");
   const changed = [];
+  const count=0
   const add=0
   const res=add(2,4)
   let currentLine = 0;
@@ -104,6 +105,7 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
 
 
 
