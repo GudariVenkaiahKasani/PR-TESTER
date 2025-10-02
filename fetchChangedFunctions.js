@@ -7,6 +7,7 @@ const traverse = require("@babel/traverse").default;
  */
 export function parseDiff(patch) {
   const lines = patch.split("\n");
+  cont new=0;
   const changed = [];
   let currentLine = 0;
 
@@ -102,4 +103,5 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
 
