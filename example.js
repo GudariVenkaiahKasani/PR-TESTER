@@ -1,6 +1,7 @@
 // Function 1: simple addition
 export function add(a, b) {
-  return a + b;
+  const c=a+b
+  return c;
 }
 
 // Function 2: multiply
