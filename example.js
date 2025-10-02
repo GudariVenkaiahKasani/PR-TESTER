@@ -1,5 +1,6 @@
 // Function 1: simple addition
-export function add(a, b) {
+export function add(a, b) 
+const c=0
   return a + b;
 }
 
