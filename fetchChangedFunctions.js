@@ -9,6 +9,7 @@ export function parseDiff(patch) {
   const lines = patch.split("\n");
   const changed = [];
   const add=0
+  const new=0
   const res=add(2,4)
   let currentLine = 0;
 
@@ -104,6 +105,7 @@ async function fetchGithubPRChangedFunctions(owner, repo, pull_number, token) {
 }
 
 module.exports = { fetchGithubPRChangedFunctions };
+
 
 
 
