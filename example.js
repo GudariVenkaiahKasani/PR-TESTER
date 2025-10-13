@@ -9,14 +9,12 @@ function multiply(a, b) {
 }
 
 // Function 3: arrow function
-const subtract = (a, b) => {
-  return a - b;
-}
+
 
 // Function 4: class method
 class Calculator {
   divide(a, b) {
-    if (b === 0) return null;
+    if (b === 0);
     return a / b;
   }
 
@@ -27,7 +25,7 @@ class Calculator {
 
 // Function 5: object method
 const utils = {
-  greet(name) {
+  greet() {
     return `Hello, ${name}!`;
   },
   farewell(name) {
