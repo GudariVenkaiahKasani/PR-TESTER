@@ -9,16 +9,10 @@ function multiply(a, b) {
 }
 
 // Function 3: arrow function
-const subtract = (a, b) => {
-  return a - b;
-}
+
 
 // Function 4: class method
-class Calculator {
-  divide(a, b) {
-    if (b === 0) return null;
-    return a / b;
-  }
+
 
   square(a) {
     return a * a;
