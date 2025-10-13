@@ -4,9 +4,7 @@ export function add(a, b) {
 }
 
 // Function 2: multiply
-function multiply(a, b) {
-  return a * b;
-}
+
 
 // Function 3: arrow function
 const subtract = (a, b) => {
@@ -16,7 +14,7 @@ const subtract = (a, b) => {
 // Function 4: class method
 class Calculator {
   divide(a, b) {
-    if (b === 0) return null;
+    if (b === 0) 
     return a / b;
   }
 
